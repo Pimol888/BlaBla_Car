@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../model/ride_pref/ride_pref.dart';
 import '../../service/ride_prefs_service.dart';
 import '../../theme/theme.dart';
@@ -43,6 +44,7 @@ class _RidePrefScreenState extends State<RidePrefScreen> {
             SizedBox(height: 100),
             Container(
               margin: EdgeInsets.symmetric(horizontal: BlaSpacings.xxl),
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
               decoration: BoxDecoration(
                 color: Colors.white, // White background
                 borderRadius: BorderRadius.circular(16), // Rounded corners
@@ -52,28 +54,28 @@ class _RidePrefScreenState extends State<RidePrefScreen> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   // 2.1 Display the Form to input the ride preferences
-                  RidePrefForm(
-                    initRidePref: RidePrefService.currentRidePref,
-                  ),
+                  RidePrefForm(initRidePref: RidePrefService.currentRidePref,),
                   SizedBox(height: BlaSpacings.m),
-
-                  // 2.2 Optionally display a list of past preferences
-                  SizedBox(
-                    height: 200, // Set a fixed height
-                    child: ListView.builder(
-                      shrinkWrap: true, // Fix ListView height issue
-                      physics: AlwaysScrollableScrollPhysics(),
-                      itemCount: RidePrefService.ridePrefsHistory.length,
-                      itemBuilder: (ctx, index) => RidePrefHistoryTile(
-                        ridePref: RidePrefService.ridePrefsHistory[index],
-                        onPressed: () => onRidePrefSelected(
-                            RidePrefService.ridePrefsHistory[index]),
-                      ),
-                    ),
-                  ),
                 ],
               ),
             ),
+            Padding(
+              padding: EdgeInsets.all(BlaSpacings.xxl),
+              child: // 2.2 Optionally display a list of past preferences
+                  SizedBox(
+                height: 200, // Set a fixed height
+                child: ListView.builder(
+                  shrinkWrap: true, // Fix ListView height issue
+                  physics: AlwaysScrollableScrollPhysics(),
+                  itemCount: RidePrefService.ridePrefsHistory.length,
+                  itemBuilder: (ctx, index) => RidePrefHistoryTile(
+                    ridePref: RidePrefService.ridePrefsHistory[index],
+                    onPressed: () => onRidePrefSelected(
+                        RidePrefService.ridePrefsHistory[index]),
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ],
