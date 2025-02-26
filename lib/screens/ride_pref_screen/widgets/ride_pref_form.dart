@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:week3/screens/picking_location/picking_location_screen.dart';
+import 'package:week3/screens/Picking_locations/picking_location_screen.dart';
 import 'package:week3/screens/search/search_screen.dart';
 import 'package:week3/theme/theme.dart';
 import 'package:week3/utils/animations_util.dart';
-import 'package:week3/widgets/actions/action_button.dart';
+import 'package:week3/widgets/actions/bla_button.dart';
 import 'package:week3/widgets/display/bla_divider.dart';
 import 'package:week3/widgets/inputs/date_picker.dart';
 import 'package:week3/widgets/inputs/picking_loca.dart';

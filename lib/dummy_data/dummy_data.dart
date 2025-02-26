@@ -98,49 +98,49 @@ List<RidePref> fakeRidePrefs = [
 // Fake  Users
 List<User> fakeUsers = [
   User(
-    firstName: "Alice",
-    lastName: "Dupont",
-    email: "alice.dupont@example.com",
+    firstName: "Mol",
+    lastName: "Mol",
+    email: "mol.mol@example.com",
     phone: "+33 612345678",
     profilePicture: "https://randomuser.me/api/portraits/women/1.jpg",
     verifiedProfile: true,
   ),
   User(
-    firstName: "Bob",
-    lastName: "Smith",
-    email: "bob.smith@example.com",
+    firstName: "Smith",
+    lastName: "Sam",
+    email: "sam.smith@example.com",
     phone: "+44 789456123",
     profilePicture: "https://randomuser.me/api/portraits/men/2.jpg",
     verifiedProfile: false,
   ),
   User(
-    firstName: "Charlie",
-    lastName: "Martin",
-    email: "charlie.martin@example.com",
+    firstName: "venhav",
+    lastName: "Ou",
+    email: "ou.venhav@example.com",
     phone: "+33 674839201",
     profilePicture: "https://randomuser.me/api/portraits/men/3.jpg",
     verifiedProfile: true,
   ),
   User(
-    firstName: "Diane",
-    lastName: "Lemoine",
-    email: "diane.lemoine@example.com",
+    firstName: "Sovathanak",
+    lastName: "Phon",
+    email: "phon.vathanake@example.com",
     phone: "+44 741258963",
     profilePicture: "https://randomuser.me/api/portraits/women/4.jpg",
     verifiedProfile: true,
   ),
   User(
-    firstName: "Ethan",
-    lastName: "Brown",
-    email: "ethan.brown@example.com",
+    firstName: "Sorany",
+    lastName: "Non",
+    email: "sorany.non@example.com",
     phone: "+44 785412369",
     profilePicture: "https://randomuser.me/api/portraits/men/5.jpg",
     verifiedProfile: false,
   ),
   User(
-    firstName: "Fanny",
-    lastName: "Durand",
-    email: "fanny.durand@example.com",
+    firstName: "Pimol",
+    lastName: "Oem",
+    email: "pimol.oem@example.com",
     phone: "+33 675839201",
     profilePicture: "https://randomuser.me/api/portraits/women/6.jpg",
     verifiedProfile: true,
@@ -162,10 +162,13 @@ List<Ride> fakeRides = List.generate(50, (index) {
   User driver = fakeUsers[random.nextInt(fakeUsers.length)];
 
   // Random ride details
-  DateTime departureTime = DateTime.now().add(Duration(days: random.nextInt(10), hours: random.nextInt(24)));
-  DateTime arrivalTime = departureTime.add(Duration(hours: random.nextInt(5) + 2)); // Rides take 2-6 hours
+  DateTime departureTime = DateTime.now()
+      .add(Duration(days: random.nextInt(10), hours: random.nextInt(24)));
+  DateTime arrivalTime = departureTime
+      .add(Duration(hours: random.nextInt(5) + 2)); // Rides take 2-6 hours
   int availableSeats = random.nextInt(4) + 1; // Between 1 and 4 seats
-  double pricePerSeat = (random.nextDouble() * 20 + 5).roundToDouble(); // Price between 5€ and 25€
+  double pricePerSeat = (random.nextDouble() * 20 + 5)
+      .roundToDouble(); // Price between 5€ and 25€
 
   return Ride(
     departureLocation: departureLocation,

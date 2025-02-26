@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:week3/screens/seat_number/search_number_screen.dart';
 import 'package:week3/theme/theme.dart';

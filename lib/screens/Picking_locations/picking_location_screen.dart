@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:week3/model/ride/locations.dart';
+import 'package:week3/screens/Picking_locations/widgets/tile.dart';
 import 'package:week3/service/locations_service.dart';
 import 'package:week3/theme/theme.dart';
 import 'package:week3/widgets/inputs/search_bar.dart';
 
-import 'tile.dart';
 
 class LocationPickerScreen extends StatefulWidget {
   //Function to modify the parent locotion

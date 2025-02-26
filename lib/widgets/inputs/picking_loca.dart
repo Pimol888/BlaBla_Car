@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:week3/model/ride/locations.dart';
-import 'package:week3/screens/picking_location/picking_location_screen.dart';
+import 'package:week3/screens/Picking_locations/picking_location_screen.dart';
 import 'package:week3/theme/theme.dart';
 import 'package:week3/utils/animations_util.dart';
 
